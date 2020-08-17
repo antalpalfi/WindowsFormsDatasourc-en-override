@@ -39,6 +39,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelGeslacth = new System.Windows.Forms.Label();
             this.btnAtrRemove = new System.Windows.Forms.Button();
+            this.labelKleur = new System.Windows.Forms.Label();
+            this.labelMinleeft = new System.Windows.Forms.Label();
+            this.labelMAxP = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbParkNaam
@@ -84,6 +87,7 @@
             this.btnAttractie.TabIndex = 6;
             this.btnAttractie.Text = "Add";
             this.btnAttractie.UseVisualStyleBackColor = true;
+            this.btnAttractie.Click += new System.EventHandler(this.btnAttractie_Click);
             // 
             // btnWerknRem
             // 
@@ -138,11 +142,41 @@
             this.btnAtrRemove.Text = "Remove";
             this.btnAtrRemove.UseVisualStyleBackColor = true;
             // 
+            // labelKleur
+            // 
+            this.labelKleur.AutoSize = true;
+            this.labelKleur.Location = new System.Drawing.Point(240, 184);
+            this.labelKleur.Name = "labelKleur";
+            this.labelKleur.Size = new System.Drawing.Size(34, 13);
+            this.labelKleur.TabIndex = 13;
+            this.labelKleur.Text = "Kleur:";
+            // 
+            // labelMinleeft
+            // 
+            this.labelMinleeft.AutoSize = true;
+            this.labelMinleeft.Location = new System.Drawing.Point(237, 210);
+            this.labelMinleeft.Name = "labelMinleeft";
+            this.labelMinleeft.Size = new System.Drawing.Size(57, 13);
+            this.labelMinleeft.TabIndex = 14;
+            this.labelMinleeft.Text = "Min leeftijd";
+            // 
+            // labelMAxP
+            // 
+            this.labelMAxP.AutoSize = true;
+            this.labelMAxP.Location = new System.Drawing.Point(237, 233);
+            this.labelMAxP.Name = "labelMAxP";
+            this.labelMAxP.Size = new System.Drawing.Size(77, 13);
+            this.labelMAxP.TabIndex = 15;
+            this.labelMAxP.Text = "Max personen:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 305);
+            this.Controls.Add(this.labelMAxP);
+            this.Controls.Add(this.labelMinleeft);
+            this.Controls.Add(this.labelKleur);
             this.Controls.Add(this.btnAtrRemove);
             this.Controls.Add(this.labelGeslacth);
             this.Controls.Add(this.label2);
@@ -175,6 +209,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelGeslacth;
         private System.Windows.Forms.Button btnAtrRemove;
+        private System.Windows.Forms.Label labelKleur;
+        private System.Windows.Forms.Label labelMinleeft;
+        private System.Windows.Forms.Label labelMAxP;
     }
 }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsDatasourc_en_overwrite
 {
-    class Attracties
+    public class Attracties
     {
         public string Naam { get; set; }
         public string Kleur { get; set; }

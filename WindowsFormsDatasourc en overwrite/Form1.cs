@@ -17,6 +17,7 @@ namespace WindowsFormsDatasourc_en_overwrite
             InitializeComponent();
         }
         public List<Werknemers> werkList = new List<Werknemers>();
+        public List<Attracties> MijnAttracties { get; set; }
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -43,7 +44,7 @@ namespace WindowsFormsDatasourc_en_overwrite
         {
             werkList.RemoveAt(lbWernem.SelectedIndex);
             lbWernem.Items.Remove(lbWernem.SelectedIndex);
-            RefreshList();
+            RefreshListWerk();
         }
 
         private void btnWerkNemToe_Click(object sender, EventArgs e)
@@ -56,14 +57,32 @@ namespace WindowsFormsDatasourc_en_overwrite
                     werkList = werkadd.returnLijst;
                    
                 }
-                RefreshList();
+                RefreshListWerk();
 
             }
         }
-       public void RefreshList()
+       public void RefreshListWerk()
         {
             lbWernem.DataSource = null;
             lbWernem.DataSource = werkList;
+        }
+
+        private void btnAttractie_Click(object sender, EventArgs e)
+        {
+            using (AttractieAdd attAdd = new AttractieAdd(MijnAttracties))
+            {
+                var result = attAdd.ShowDialog();
+                if (result==DialogResult.OK)
+                {
+                    MijnAttracties = attAdd.returnListAtt;
+                }
+                RefreshListAtt();
+            }
+        }
+        public void RefreshListAtt()
+        {
+            lboxAttractie.DataSource = null;
+            lboxAttractie.DataSource = MijnAttracties;
         }
     }
 }
