@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsDatasourc_en_overwrite
 {
-    partial class Form1
+    partial class Oef1
     {
         /// <summary>
         /// Required designer variable.

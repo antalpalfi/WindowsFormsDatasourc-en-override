@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsDatasourc_en_overwrite
 {
-    public partial class Form1 : Form
+    public partial class Oef1 : Form
     {
-        public Form1()
+        public Oef1()
         {
             InitializeComponent();
         }
