@@ -131,7 +131,7 @@
             this.Controls.Add(this.txtNaam);
             this.Name = "AttractieAdd";
             this.Text = "AttractieAdd";
-            this.Load += new System.EventHandler(this.AttractieAdd_Load);
+           
             ((System.ComponentModel.ISupportInitialize)(this.numLeef)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMaxPers)).EndInit();
             this.ResumeLayout(false);

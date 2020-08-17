@@ -37,9 +37,6 @@ namespace WindowsFormsDatasourc_en_overwrite
 
 }
 
-        private void AttractieAdd_Load(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
