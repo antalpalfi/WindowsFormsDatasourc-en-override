@@ -42,6 +42,11 @@
             this.labelKleur = new System.Windows.Forms.Label();
             this.labelMinleeft = new System.Windows.Forms.Label();
             this.labelMAxP = new System.Windows.Forms.Label();
+            this.pictureBoxPark = new System.Windows.Forms.PictureBox();
+            this.lbKleur = new System.Windows.Forms.Label();
+            this.lbMinLeef = new System.Windows.Forms.Label();
+            this.lbMaxPer = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPark)).BeginInit();
             this.SuspendLayout();
             // 
             // lbParkNaam
@@ -68,12 +73,13 @@
             this.lboxAttractie.Name = "lboxAttractie";
             this.lboxAttractie.Size = new System.Drawing.Size(120, 95);
             this.lboxAttractie.TabIndex = 4;
+            this.lboxAttractie.SelectedIndexChanged += new System.EventHandler(this.lboxAttractie_SelectedIndexChanged);
             // 
             // btnWerkNemToe
             // 
-            this.btnWerkNemToe.Location = new System.Drawing.Point(12, 52);
+            this.btnWerkNemToe.Location = new System.Drawing.Point(3, 52);
             this.btnWerkNemToe.Name = "btnWerkNemToe";
-            this.btnWerkNemToe.Size = new System.Drawing.Size(75, 23);
+            this.btnWerkNemToe.Size = new System.Drawing.Size(55, 23);
             this.btnWerkNemToe.TabIndex = 5;
             this.btnWerkNemToe.Text = "Add";
             this.btnWerkNemToe.UseVisualStyleBackColor = true;
@@ -83,7 +89,7 @@
             // 
             this.btnAttractie.Location = new System.Drawing.Point(240, 52);
             this.btnAttractie.Name = "btnAttractie";
-            this.btnAttractie.Size = new System.Drawing.Size(75, 23);
+            this.btnAttractie.Size = new System.Drawing.Size(54, 23);
             this.btnAttractie.TabIndex = 6;
             this.btnAttractie.Text = "Add";
             this.btnAttractie.UseVisualStyleBackColor = true;
@@ -91,9 +97,9 @@
             // 
             // btnWerknRem
             // 
-            this.btnWerknRem.Location = new System.Drawing.Point(130, 118);
+            this.btnWerknRem.Location = new System.Drawing.Point(64, 52);
             this.btnWerknRem.Name = "btnWerknRem";
-            this.btnWerknRem.Size = new System.Drawing.Size(75, 23);
+            this.btnWerknRem.Size = new System.Drawing.Size(59, 23);
             this.btnWerknRem.TabIndex = 7;
             this.btnWerknRem.Text = "Remove";
             this.btnWerknRem.UseVisualStyleBackColor = true;
@@ -102,7 +108,7 @@
             // labelNaam
             // 
             this.labelNaam.AutoSize = true;
-            this.labelNaam.Location = new System.Drawing.Point(44, 184);
+            this.labelNaam.Location = new System.Drawing.Point(35, 184);
             this.labelNaam.Name = "labelNaam";
             this.labelNaam.Size = new System.Drawing.Size(0, 13);
             this.labelNaam.TabIndex = 8;
@@ -128,19 +134,20 @@
             // labelGeslacth
             // 
             this.labelGeslacth.AutoSize = true;
-            this.labelGeslacth.Location = new System.Drawing.Point(65, 210);
+            this.labelGeslacth.Location = new System.Drawing.Point(58, 210);
             this.labelGeslacth.Name = "labelGeslacth";
             this.labelGeslacth.Size = new System.Drawing.Size(0, 13);
             this.labelGeslacth.TabIndex = 11;
             // 
             // btnAtrRemove
             // 
-            this.btnAtrRemove.Location = new System.Drawing.Point(366, 118);
+            this.btnAtrRemove.Location = new System.Drawing.Point(300, 53);
             this.btnAtrRemove.Name = "btnAtrRemove";
-            this.btnAtrRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnAtrRemove.Size = new System.Drawing.Size(60, 23);
             this.btnAtrRemove.TabIndex = 12;
             this.btnAtrRemove.Text = "Remove";
             this.btnAtrRemove.UseVisualStyleBackColor = true;
+            this.btnAtrRemove.Click += new System.EventHandler(this.btnAtrRemove_Click);
             // 
             // labelKleur
             // 
@@ -156,9 +163,9 @@
             this.labelMinleeft.AutoSize = true;
             this.labelMinleeft.Location = new System.Drawing.Point(237, 210);
             this.labelMinleeft.Name = "labelMinleeft";
-            this.labelMinleeft.Size = new System.Drawing.Size(57, 13);
+            this.labelMinleeft.Size = new System.Drawing.Size(60, 13);
             this.labelMinleeft.TabIndex = 14;
-            this.labelMinleeft.Text = "Min leeftijd";
+            this.labelMinleeft.Text = "Min leeftijd:";
             // 
             // labelMAxP
             // 
@@ -169,11 +176,48 @@
             this.labelMAxP.TabIndex = 15;
             this.labelMAxP.Text = "Max personen:";
             // 
+            // pictureBoxPark
+            // 
+            this.pictureBoxPark.Location = new System.Drawing.Point(129, 25);
+            this.pictureBoxPark.Name = "pictureBoxPark";
+            this.pictureBoxPark.Size = new System.Drawing.Size(100, 152);
+            this.pictureBoxPark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxPark.TabIndex = 16;
+            this.pictureBoxPark.TabStop = false;
+            // 
+            // lbKleur
+            // 
+            this.lbKleur.AutoSize = true;
+            this.lbKleur.Location = new System.Drawing.Point(279, 184);
+            this.lbKleur.Name = "lbKleur";
+            this.lbKleur.Size = new System.Drawing.Size(0, 13);
+            this.lbKleur.TabIndex = 17;
+            // 
+            // lbMinLeef
+            // 
+            this.lbMinLeef.AutoSize = true;
+            this.lbMinLeef.Location = new System.Drawing.Point(297, 210);
+            this.lbMinLeef.Name = "lbMinLeef";
+            this.lbMinLeef.Size = new System.Drawing.Size(0, 13);
+            this.lbMinLeef.TabIndex = 18;
+            // 
+            // lbMaxPer
+            // 
+            this.lbMaxPer.AutoSize = true;
+            this.lbMaxPer.Location = new System.Drawing.Point(314, 233);
+            this.lbMaxPer.Name = "lbMaxPer";
+            this.lbMaxPer.Size = new System.Drawing.Size(0, 13);
+            this.lbMaxPer.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 305);
+            this.Controls.Add(this.lbMaxPer);
+            this.Controls.Add(this.lbMinLeef);
+            this.Controls.Add(this.lbKleur);
+            this.Controls.Add(this.pictureBoxPark);
             this.Controls.Add(this.labelMAxP);
             this.Controls.Add(this.labelMinleeft);
             this.Controls.Add(this.labelKleur);
@@ -191,6 +235,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPark)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,6 +257,10 @@
         private System.Windows.Forms.Label labelKleur;
         private System.Windows.Forms.Label labelMinleeft;
         private System.Windows.Forms.Label labelMAxP;
+        private System.Windows.Forms.PictureBox pictureBoxPark;
+        private System.Windows.Forms.Label lbKleur;
+        private System.Windows.Forms.Label lbMinLeef;
+        private System.Windows.Forms.Label lbMaxPer;
     }
 }
 

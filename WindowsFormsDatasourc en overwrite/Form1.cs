@@ -17,16 +17,20 @@ namespace WindowsFormsDatasourc_en_overwrite
             InitializeComponent();
         }
         public List<Werknemers> werkList = new List<Werknemers>();
-        public List<Attracties> MijnAttracties { get; set; }
+        public List<Attracties> MijnAttracties = new List<Attracties>();
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            pictureBoxPark.Image= Image.FromFile("Mario.jpg");
             Pretpark mijnPretpark = new Pretpark("Antal Park");
             lbParkNaam.Text = mijnPretpark.Naam;
 
             werkList.Add(new Werknemers("John", 30,"Man"));
             werkList.Add(new Werknemers("Patricia",20,"Vrouw"));
             lbWernem.DataSource = werkList;
+
+            MijnAttracties.Add(new Attracties("King Kong", "Red", 18, 10));
+            MijnAttracties.Add(new Attracties("T-rex", "Blue", 14, 21));
+            lboxAttractie.DataSource = MijnAttracties;
 
 
         }
@@ -83,6 +87,24 @@ namespace WindowsFormsDatasourc_en_overwrite
         {
             lboxAttractie.DataSource = null;
             lboxAttractie.DataSource = MijnAttracties;
+        }
+
+        private void btnAtrRemove_Click(object sender, EventArgs e)
+        {
+            MijnAttracties.RemoveAt(lboxAttractie.SelectedIndex);
+            lboxAttractie.Items.Remove(lboxAttractie.SelectedIndex);
+            RefreshListAtt();
+        }
+
+        private void lboxAttractie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lboxAttractie.DataSource!= null)
+            {
+                lbKleur.Text = MijnAttracties[lboxAttractie.SelectedIndex].Kleur.ToString();
+                lbMinLeef.Text = MijnAttracties[lboxAttractie.SelectedIndex].LeefTijd.ToString();
+                lbMaxPer.Text = MijnAttracties[lboxAttractie.SelectedIndex].MaxPerson.ToString();
+            }
+           
         }
     }
 }

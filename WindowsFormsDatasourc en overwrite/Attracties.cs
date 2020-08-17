@@ -21,7 +21,11 @@ namespace WindowsFormsDatasourc_en_overwrite
             MaxPerson = maxperson;
 
         }
-        
+        public override string ToString()
+        {
+            return Naam;
+        }
+
 
     }
 }

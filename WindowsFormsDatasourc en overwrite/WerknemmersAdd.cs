@@ -21,10 +21,18 @@ namespace WindowsFormsDatasourc_en_overwrite
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Werknemers nieuwWerknemers = new Werknemers(textNaam.Text,numLeeftijd.DecimalPlaces , textGeslacht.Text);
-            this.returnLijst.Add(nieuwWerknemers);
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            if (textNaam.Text!="" && numLeeftijd.Value !=0 && textGeslacht.Text!="")
+            {
+                Werknemers nieuwWerknemers = new Werknemers(textNaam.Text, numLeeftijd.DecimalPlaces, textGeslacht.Text);
+                this.returnLijst.Add(nieuwWerknemers);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Vuil alles in");
+            }
+            
         }
     }
 }
