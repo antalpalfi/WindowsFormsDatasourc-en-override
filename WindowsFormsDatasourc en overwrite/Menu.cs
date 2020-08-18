@@ -25,7 +25,8 @@ namespace WindowsFormsDatasourc_en_overwrite
 
         private void btnOef2_Click(object sender, EventArgs e)
         {
-
+            Oefening2 oef2 = new Oefening2();
+            oef2.Show();
         }
     }
 }

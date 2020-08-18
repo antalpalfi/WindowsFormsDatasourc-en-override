@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Afspraak.cs" />
+    <Compile Include="Afspraakmaken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Afspraakmaken.Designer.cs">
+      <DependentUpon>Afspraakmaken.cs</DependentUpon>
+    </Compile>
     <Compile Include="AttractieAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +60,7 @@
       <DependentUpon>AttractieAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Attracties.cs" />
+    <Compile Include="Doktors.cs" />
     <Compile Include="Oef1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +73,12 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Oefening2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oefening2.Designer.cs">
+      <DependentUpon>Oefening2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pretpark.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +89,10 @@
     <Compile Include="WerknemmersAdd.Designer.cs">
       <DependentUpon>WerknemmersAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="ZiekenHuis.cs" />
+    <EmbeddedResource Include="Afspraakmaken.resx">
+      <DependentUpon>Afspraakmaken.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AttractieAdd.resx">
       <DependentUpon>AttractieAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oefening2.resx">
+      <DependentUpon>Oefening2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

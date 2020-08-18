@@ -13,8 +13,8 @@ namespace WindowsFormsDatasourc_en_overwrite
     public partial class AttractieAdd : Form
     {
         public AttractieAdd(List<Attracties> attracties)
-        
-        
+
+
         {
             InitializeComponent();
             returnListAtt = attracties;
@@ -29,14 +29,14 @@ namespace WindowsFormsDatasourc_en_overwrite
                 this.returnListAtt.Add(newAttracties);
                 this.DialogResult = DialogResult.OK;
                 Close();
-        }
+            }
             else
             {
                 MessageBox.Show("Vuil alles in");
             }
 
-}
+        }
 
-      
+
     }
 }
