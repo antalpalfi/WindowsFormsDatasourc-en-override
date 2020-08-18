@@ -51,41 +51,34 @@ namespace WindowsFormsDatasourc_en_overwrite
             TangoList.Add(new TangoMembers("Vas Adam", "35", "Man"));
             TangoList.Add(new TangoMembers("Torocsik Bela", "55", "Man"));
             TangoList.Add(new TangoMembers("Schneider Andrea", "41", "Vrouw"));
+            TangoList.Add(new TangoMembers("Vastag Alexandra", "40", "Vrouw"));
+            TangoList.Add(new TangoMembers("John Taylor", "48", "Man"));
+            TangoList.Add(new TangoMembers("Koen Deans", "47", "Man"));
 
         }
 
         private void btnKiez_Click(object sender, EventArgs e)
         {
 
-            //MessageBox.Show(TangoList[0].Naam);
-            //Random rng = new Random();
-            //int a = rng.Next(0, TangoList.Count);
-            //System.Threading.Thread.Sleep(50);
-            //Random rng2 = new Random();
-            //int b = rng2.Next(0, TangoList.Count);
-            //System.Threading.Thread.Sleep(50);
-            //Random rng3 = new Random();
-            //int c = rng3.Next(0, TangoList.Count);
-            //System.Threading.Thread.Sleep(50);
-            //Random rng4 = new Random();
-            //int d = rng4.Next(0, TangoList.Count);
-            //System.Threading.Thread.Sleep(50);
-            //Random rng5 = new Random();
-            //int k = rng5.Next(0, TangoList.Count);
-            //System.Threading.Thread.Sleep(50);
-            //Random rng6 = new Random();
-            //int f = rng6.Next(0, TangoList.Count);
-            //MessageBox.Show($"{a} {b} {c} {f} {d} {d}");
-
+            
+            List<string> luckyList = new List<string>();
             Random rand = new Random(DateTime.Now.ToString().GetHashCode());
             int k = 0;
             while (k<6)
             {
                 int index = rand.Next(0, TangoList.Count);
-                MessageBox.Show($"{TangoList[index].Naam} u bent gekozen");
+                luckyList.Add(TangoList[index].Naam);
                 TangoList.RemoveAt(index);
                 k++;
             }
+            MessageBox.Show($"New group members\n" +
+                 $"\n" +
+                $"{luckyList[0]}\n" +
+                $"{luckyList[1]}\n" +
+                $"{luckyList[2]}\n" +
+                $"{luckyList[3]}\n" +
+                $"{luckyList[4]}\n" +
+                $"{luckyList[5]}\n");
 
         }
 
