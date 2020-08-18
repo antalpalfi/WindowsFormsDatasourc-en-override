@@ -24,8 +24,8 @@ namespace WindowsFormsDatasourc_en_overwrite
             Pretpark mijnPretpark = new Pretpark("Antal Park");
             lbParkNaam.Text = mijnPretpark.Naam;
 
-            werkList.Add(new Werknemers("John", 30,"Man"));
-            werkList.Add(new Werknemers("Patricia",20,"Vrouw"));
+            werkList.Add(new Werknemers("John", "30","Man"));
+            werkList.Add(new Werknemers("Patricia","20","Vrouw"));
             lbWernem.DataSource = werkList;
 
             MijnAttracties.Add(new Attracties("King Kong", "Red", 18, 10));

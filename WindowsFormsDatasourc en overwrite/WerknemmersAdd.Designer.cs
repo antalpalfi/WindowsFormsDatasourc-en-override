@@ -32,10 +32,13 @@
             this.textNaam = new System.Windows.Forms.TextBox();
             this.labelLeef = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textGeslacht = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.numLeeftijd = new System.Windows.Forms.NumericUpDown();
+            this.rdbMan = new System.Windows.Forms.RadioButton();
+            this.rdbVrouw = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.numLeeftijd)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelNaam
@@ -66,22 +69,15 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 66);
+            this.label2.Location = new System.Drawing.Point(1, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Geslacth";
             // 
-            // textGeslacht
-            // 
-            this.textGeslacht.Location = new System.Drawing.Point(64, 66);
-            this.textGeslacht.Name = "textGeslacht";
-            this.textGeslacht.Size = new System.Drawing.Size(100, 20);
-            this.textGeslacht.TabIndex = 5;
-            // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(74, 92);
+            this.btnAdd.Location = new System.Drawing.Point(64, 134);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 6;
@@ -96,14 +92,46 @@
             this.numLeeftijd.Size = new System.Drawing.Size(120, 20);
             this.numLeeftijd.TabIndex = 7;
             // 
+            // rdbMan
+            // 
+            this.rdbMan.AutoSize = true;
+            this.rdbMan.Location = new System.Drawing.Point(6, 15);
+            this.rdbMan.Name = "rdbMan";
+            this.rdbMan.Size = new System.Drawing.Size(46, 17);
+            this.rdbMan.TabIndex = 8;
+            this.rdbMan.TabStop = true;
+            this.rdbMan.Text = "Man";
+            this.rdbMan.UseVisualStyleBackColor = true;
+            // 
+            // rdbVrouw
+            // 
+            this.rdbVrouw.AutoSize = true;
+            this.rdbVrouw.Location = new System.Drawing.Point(6, 38);
+            this.rdbVrouw.Name = "rdbVrouw";
+            this.rdbVrouw.Size = new System.Drawing.Size(55, 17);
+            this.rdbVrouw.TabIndex = 9;
+            this.rdbVrouw.TabStop = true;
+            this.rdbVrouw.Text = "Vrouw";
+            this.rdbVrouw.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdbMan);
+            this.groupBox1.Controls.Add(this.rdbVrouw);
+            this.groupBox1.Location = new System.Drawing.Point(64, 64);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(75, 61);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            // 
             // WerknemmersAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(211, 129);
+            this.ClientSize = new System.Drawing.Size(211, 169);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.numLeeftijd);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textGeslacht);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelLeef);
             this.Controls.Add(this.textNaam);
@@ -111,6 +139,8 @@
             this.Name = "WerknemmersAdd";
             this.Text = "WerknemmersAdd";
             ((System.ComponentModel.ISupportInitialize)(this.numLeeftijd)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,8 +152,10 @@
         private System.Windows.Forms.TextBox textNaam;
         private System.Windows.Forms.Label labelLeef;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textGeslacht;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.NumericUpDown numLeeftijd;
+        private System.Windows.Forms.RadioButton rdbMan;
+        private System.Windows.Forms.RadioButton rdbVrouw;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

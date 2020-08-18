@@ -39,7 +39,6 @@ namespace WindowsFormsDatasourc_en_overwrite
             numAge.Value = 0;
             rdbMan.Checked = false;
             rdbVrouw.Checked = false;
-
         }
 
         private void Oefening3_Load(object sender, EventArgs e)
@@ -54,13 +53,10 @@ namespace WindowsFormsDatasourc_en_overwrite
             TangoList.Add(new TangoMembers("Vastag Alexandra", "40", "Vrouw"));
             TangoList.Add(new TangoMembers("John Taylor", "48", "Man"));
             TangoList.Add(new TangoMembers("Koen Deans", "47", "Man"));
-
         }
 
         private void btnKiez_Click(object sender, EventArgs e)
         {
-
-            
             List<string> luckyList = new List<string>();
             Random rand = new Random(DateTime.Now.ToString().GetHashCode());
             int k = 0;
@@ -79,7 +75,6 @@ namespace WindowsFormsDatasourc_en_overwrite
                 $"{luckyList[3]}\n" +
                 $"{luckyList[4]}\n" +
                 $"{luckyList[5]}\n");
-
         }
 
     }

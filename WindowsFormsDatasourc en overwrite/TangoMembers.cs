@@ -17,7 +17,6 @@ namespace WindowsFormsDatasourc_en_overwrite
             Naam = naam;
             Age = age;
             Geslacht = geslacht;
-
         }
         public override string ToString()
         {

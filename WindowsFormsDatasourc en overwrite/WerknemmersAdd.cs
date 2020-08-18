@@ -21,9 +21,16 @@ namespace WindowsFormsDatasourc_en_overwrite
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (textNaam.Text!="" && numLeeftijd.Value !=0 && textGeslacht.Text!="")
+            if (textNaam.Text!="" && numLeeftijd.Value !=0 && rdbMan.Checked)
             {
-                Werknemers nieuwWerknemers = new Werknemers(textNaam.Text, numLeeftijd.DecimalPlaces, textGeslacht.Text);
+                Werknemers nieuwWerknemers = new Werknemers(textNaam.Text, numLeeftijd.Value.ToString(), rdbMan.Text);
+                this.returnLijst.Add(nieuwWerknemers);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else if (textNaam.Text != "" && numLeeftijd.Value != 0 && rdbVrouw.Checked)
+            {
+                Werknemers nieuwWerknemers = new Werknemers(textNaam.Text, numLeeftijd.Value.ToString(), rdbVrouw.Text);
                 this.returnLijst.Add(nieuwWerknemers);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
