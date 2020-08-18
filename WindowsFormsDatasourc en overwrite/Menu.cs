@@ -28,5 +28,16 @@ namespace WindowsFormsDatasourc_en_overwrite
             Oefening2 oef2 = new Oefening2();
             oef2.Show();
         }
+
+        private void btnOef3_Click(object sender, EventArgs e)
+        {
+            Oefening3 oef3 = new Oefening3();
+            oef3.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -62,6 +62,7 @@
             this.btnOef3.TabIndex = 2;
             this.btnOef3.Text = "Oefening3";
             this.btnOef3.UseVisualStyleBackColor = true;
+            this.btnOef3.Click += new System.EventHandler(this.btnOef3_Click);
             // 
             // btnClose
             // 
@@ -71,6 +72,7 @@
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Sluit";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Menu
             // 

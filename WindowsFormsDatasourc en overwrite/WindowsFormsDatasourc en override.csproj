@@ -79,9 +79,16 @@
     <Compile Include="Oefening2.Designer.cs">
       <DependentUpon>Oefening2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Oefening3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oefening3.Designer.cs">
+      <DependentUpon>Oefening3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pretpark.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TangoMembers.cs" />
     <Compile Include="Werknemers.cs" />
     <Compile Include="WerknemmersAdd.cs">
       <SubType>Form</SubType>
@@ -104,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Oefening2.resx">
       <DependentUpon>Oefening2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oefening3.resx">
+      <DependentUpon>Oefening3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
